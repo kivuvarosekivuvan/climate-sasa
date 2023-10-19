@@ -20,11 +20,7 @@
     font-weight: 600;
     background-color: rgb(0, 162, 255);
   }
-  
-  .error-message {
-    color: red;
-    font-weight: bold;
-  }
+
   
   .weather-data {
     margin-top: 20px;
