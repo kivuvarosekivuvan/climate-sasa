@@ -3,9 +3,7 @@ import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './map.css'; 
 
-const Map = () => {
-  const mapCenter = [-1.286389, 36.817223];
-
+const Map = ({ mapCenter }) => {
   return (
     <MapContainer center={mapCenter} zoom={14} className="map-container">
       <TileLayer

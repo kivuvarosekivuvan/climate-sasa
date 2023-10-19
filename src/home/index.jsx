@@ -1,31 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import Map from '../atom/map';
-import { TiWeatherCloudy, TiWeatherSunny, TiWeatherShower, TiWeatherSnow, TiThermometer, TiWeatherRain, TiArrowForwardOutline } from 'react-icons/ti';
+import { TiWeatherCloudy, TiWeatherShower, TiThermometer, TiArrowForwardOutline } from 'react-icons/ti';
 import useWeatherData from '../hooks/useGetWeather';
 
 const Home = () => {
-  const { city, weatherData, error, handleInputChange, handleSubmit, mapCenter } = useWeatherData();
+  const { city, weatherData, error, handleInputChange, handleSubmit } = useWeatherData();
+  const [mapCenter, setMapCenter] = useState([-1.286389, 36.817223]);
 
   const WeatherData = () => {
     if (error) {
       return <p className="error-message">{error}</p>;
     }
-  
+
     if (weatherData && weatherData.main && weatherData.main.temp) {
       return (
         <div className="weather-data">
-         <div className='cityname'>
-                <p id="city">City:</p>
-                <p className="weather-value1">{weatherData.name}</p>
-              </div>
-              <div className="weather-info">
+          <div className='cityname'>
+            <p id="city">City:</p>
+            <p className="weather-value1">{weatherData.name}</p>
+          </div>
+          <div className="weather-info">
             <div className="weather-item">
-              <p className="weather-label"><TiThermometer/>Temperature</p>
+              <p className="weather-label"><TiThermometer />Temperature</p>
               <p className="weather-value">{(weatherData.main.temp - 273.15).toFixed(1)}°C</p>
             </div>
             <div className="weather-item">
-              <p className="weather-label"><TiWeatherShower/>Humidity</p>
+              <p className="weather-label"><TiWeatherShower />Humidity</p>
               <p className="weather-value">{weatherData.main.humidity}%</p>
             </div>
             <div className="weather-item">
@@ -40,7 +41,7 @@ const Home = () => {
         </div>
       );
     }
-  
+
     return null;
   };
 
@@ -61,8 +62,7 @@ const Home = () => {
           </button>
         </form>
       </div>
-      {weatherData && <Map mapCenter={mapCenter} />}
-     
+      {weatherData && <Map mapCenter={mapCenter} setMapCenter={setMapCenter} />}
       {WeatherData()}
     </div>
   );

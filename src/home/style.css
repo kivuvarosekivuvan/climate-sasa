@@ -1,4 +1,4 @@
-.form {
+   .form {
     margin-bottom: 30px;
   }
   
@@ -20,6 +20,7 @@
     font-weight: 600;
     background-color: rgb(0, 162, 255);
   }
+  
   .error-message {
     color: red;
     font-weight: bold;
@@ -41,7 +42,7 @@
     border-radius: 8px;
     padding: 8px;
     height: 12vh;
-    width:15%;
+    width: 15%;
     box-shadow: 0px 4px 8px grey;
     margin-right: 10px;
   }
@@ -53,19 +54,83 @@
   .weather-value {
     margin-top: 5px;
   }
-  .cityname{
+  
+  .cityname {
     display: flex;
     align-items: center;
     margin-left: 800px;
     margin-top: -30px;
   }
-
-  #city{
+  
+  #city {
     font-size: 25px;
   }
-  .weather-value1{
+  
+  .weather-value1 {
     font-size: 30px;
     margin-left: 10px;
     font-weight: 600;
   }
   
+  @media (max-width: 992px) {
+    .input {
+      padding: 10px 60px;
+    }
+  
+    .button {
+      padding: 10px 20px;
+      margin-left: 10px;
+    }
+  
+    .weather-info {
+      margin-left: 150px;
+    }
+  
+    .cityname {
+      margin-left: 500px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .input {
+      padding: 10px 40px;
+    }
+  
+    .button {
+      padding: 10px 15px;
+      margin-left: 5px;
+    }
+  
+    .weather-info {
+      margin-left: 100px;
+      flex-wrap: wrap;
+    }
+  
+    .weather-item {
+      width: 45%;
+      margin-bottom: 10px;
+    }
+  
+    .cityname {
+      margin-left: 0;
+      margin-top: 10px;
+      justify-content: center;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .input {
+      padding: 10px 100px;
+    }
+  
+    .button {
+      padding: 10px 40px;
+      margin-left: 30px;
+    }
+  
+    .weather-info {
+      margin-left: 200px;
+    }
+  
+
+  }

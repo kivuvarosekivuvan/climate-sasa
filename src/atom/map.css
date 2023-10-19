@@ -1,5 +1,25 @@
 .map-container {
-    width: 80%;
-    height: 600px;
-    margin-left: 170px;
+  width: 80%;
+  height: 600px;
+}
+
+@media (max-width: 992px) {
+  .map-container {
+    width: 70%;
+    margin-left: 150px;
   }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    width: 60%;
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .map-container {
+    width: 90%;
+    margin-left: 90px;
+  }
+}
