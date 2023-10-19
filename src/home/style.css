@@ -1,0 +1,71 @@
+.form {
+    margin-bottom: 30px;
+  }
+  
+  .search {
+    margin-top: 20px;
+  }
+  
+  .input {
+    padding: 10px 80px;
+    border-radius: 8px;
+  }
+  
+  .button {
+    padding: 10px 30px;
+    margin-left: 20px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(0, 162, 255);
+  }
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .weather-data {
+    margin-top: 20px;
+  }
+  
+  .weather-info {
+    display: flex;
+    margin-left: 170px;
+    gap: 20px;
+  }
+  
+  .weather-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    height: 12vh;
+    width:15%;
+    box-shadow: 0px 4px 8px grey;
+    margin-right: 10px;
+  }
+  
+  .weather-label {
+    font-weight: bold;
+  }
+  
+  .weather-value {
+    margin-top: 5px;
+  }
+  .cityname{
+    display: flex;
+    align-items: center;
+    margin-left: 800px;
+    margin-top: -30px;
+  }
+
+  #city{
+    font-size: 25px;
+  }
+  .weather-value1{
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  
