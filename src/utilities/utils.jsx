@@ -5,11 +5,16 @@ export const getWeatherData = async (cityName) => {
   try {
     const response = await fetch(`${BASE_URL}?q=${cityName}&appid=${API_KEY}`);
     const result = await response.json();
-    return result;
+    const { coord, ...weatherData } = result;
+    return {
+      ...weatherData,
+      coord: {
+        lat: coord.lat,
+        lon: coord.lon,
+      },
+    };
   } catch (error) {
     console.log(error);
     throw new Error('Failed to fetch weather data.');
   }
 };
-
-

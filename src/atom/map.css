@@ -13,7 +13,7 @@
 @media (max-width: 768px) {
   .map-container {
     width: 60%;
-    margin-left: 100px;
+    margin-left: 70px;
   }
 }
 
@@ -22,4 +22,50 @@
     width: 90%;
     margin-left: 90px;
   }
+}
+@media  (max-width: 390px) and (max-height:844px) {
+  .map-container {
+    width: 45%;
+    margin-left: 105px;
+    height: 40vh;
+  }
+
+}
+
+@media  (max-width: 540px) and (max-height:720px) {
+  .map-container {
+    width: 65%;
+    margin-left: 95px;
+    height: 70vh;
+  }
+}
+
+
+
+@media  (max-width: 1024px) and (max-height:600px) {
+  .map-container {
+    width: 88%;
+
+  } 
+}
+
+
+@media  (max-width: 1280px) and (max-height:800px) {
+  .map-container {
+    margin-left: 57px;
+  } 
+}
+
+@media  (max-width: 280px) and (max-height:653px) {
+  .map-container {
+    margin-left: 45px;
+  }
+}
+
+@media  (max-width: 912px) and (max-height:1368px) {
+  .map-container {
+    margin-left: 125px;
+  }
+
+
 }

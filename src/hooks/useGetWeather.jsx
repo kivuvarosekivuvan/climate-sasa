@@ -3,19 +3,19 @@ import { getWeatherData } from '../utilities/utils';
 
 const useWeatherData = () => {
   const [city, setCity] = useState('');
-  const [weatherData, setWeatherData] = useState();
-  const [mapCenter, setMapCenter] = useState([-1.286389, 36.817223]);
+  const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState('');
+  const [mapCenter, setMapCenter] = useState([-1.286389, 36.817223]);
 
-  const fetchWeatherData = async () => {
+  const fetchWeatherData = async (cityName) => {
     try {
-      const result = await getWeatherData(city);
-      console.log('API Response:', result);
+      const result = await getWeatherData(cityName);
       setWeatherData(result);
       setError('');
 
-      if(result && result.coord) {
-        setMapCenter([result.coord.lat, result.coord.lon])
+      if (result && result.coord) {
+        const { lat, lon } = result.coord;
+        setMapCenter([lat, lon]);
       }
     } catch (error) {
       setWeatherData(null);
@@ -23,11 +23,16 @@ const useWeatherData = () => {
     }
   };
 
+  useEffect(() => {
+    const defaultCity = 'nairobi';
+    fetchWeatherData(defaultCity);
+  }, []);
 
   useEffect(() => {
-    fetchWeatherData();
+    if (city !== '') {
+      fetchWeatherData(city);
+    }
   }, [city]);
-
 
   const handleInputChange = (event) => {
     setCity(event.target.value);
@@ -35,18 +40,12 @@ const useWeatherData = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetchWeatherData();
+    if (city !== '') {
+      fetchWeatherData(city);
+    }
   };
-  return {
-    city,
-    weatherData,
-    error,
-    handleInputChange,
-    handleSubmit,
-    mapCenter,
-  };
+
+  return { city, weatherData, error, handleInputChange, handleSubmit, mapCenter, setMapCenter };
 };
 
 export default useWeatherData;
-
-
