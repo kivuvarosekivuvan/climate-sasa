@@ -14,23 +14,6 @@ const Home = () => {
   }, [weatherData, setMapCenter]);
 
 
-  // const getWeatherIcon = (weatherCode) => {
-  //   switch (weatherCode) {
-  //     case 'Clouds':
-  //       return <TiWeatherCloudy style={{ color: 'gray', fontSize: '150px', marginLeft:'80px' }} />;
-  //     case 'Clear':
-  //       return <TiWeatherSunny style={{ color: 'yellow', fontSize: '150px' }} />;
-  //     case 'Rain':
-  //       return <TiWeatherShower style={{ color: 'rgb(0, 162, 255)', fontSize: '150px' }} />;
-  //     case 'Snow':
-  //       return <TiWeatherSnow style={{ color: 'white', fontSize: '150px' }} />;
-  //     default:
-  //       return null;
-  //   }
-  // };
-
-
-
   const getWeatherIcon = (weatherCode) => {
     const isSmallScreen = window.innerWidth <= 768;
   
