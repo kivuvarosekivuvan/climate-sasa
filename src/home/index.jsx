@@ -14,21 +14,72 @@ const Home = () => {
   }, [weatherData, setMapCenter]);
 
 
+  // const getWeatherIcon = (weatherCode) => {
+  //   switch (weatherCode) {
+  //     case 'Clouds':
+  //       return <TiWeatherCloudy style={{ color: 'gray', fontSize: '150px', marginLeft:'80px' }} />;
+  //     case 'Clear':
+  //       return <TiWeatherSunny style={{ color: 'yellow', fontSize: '150px' }} />;
+  //     case 'Rain':
+  //       return <TiWeatherShower style={{ color: 'rgb(0, 162, 255)', fontSize: '150px' }} />;
+  //     case 'Snow':
+  //       return <TiWeatherSnow style={{ color: 'white', fontSize: '150px' }} />;
+  //     default:
+  //       return null;
+  //   }
+  // };
+
+
+
   const getWeatherIcon = (weatherCode) => {
+    const isSmallScreen = window.innerWidth <= 768;
+  
     switch (weatherCode) {
       case 'Clouds':
-        return <TiWeatherCloudy style={{ color: 'gray', fontSize: '150px', marginLeft:'80px' }} />;
+        return (
+          <TiWeatherCloudy
+            style={{
+              color: 'gray',
+              fontSize: isSmallScreen ? '50px' : '150px',
+              marginLeft: isSmallScreen ? '90px' : '80px',
+              marginTop:isSmallScreen? '20px':'',
+            }}
+          />
+        );
       case 'Clear':
-        return <TiWeatherSunny style={{ color: 'yellow', fontSize: '150px' }} />;
+        return (
+          <TiWeatherSunny
+            style={{
+              color: 'yellow',
+              fontSize: isSmallScreen ? '50px' : '150px',
+              marginLeft: isSmallScreen ? '90px' : '80px',
+              marginTop:isSmallScreen? '20px':'',            }}
+          />
+        );
       case 'Rain':
-        return <TiWeatherShower style={{ color: 'rgb(0, 162, 255)', fontSize: '150px' }} />;
+        return (
+          <TiWeatherShower
+            style={{
+              color: 'rgb(0, 162, 255)',
+              fontSize: isSmallScreen ? '50px' : '150px',
+              marginLeft: isSmallScreen ? '90px' : '80px',
+              marginTop:isSmallScreen? '20px':'',            }}
+          />
+        );
       case 'Snow':
-        return <TiWeatherSnow style={{ color: 'white', fontSize: '150px' }} />;
+        return (
+          <TiWeatherSnow
+            style={{
+              color: 'white',
+              fontSize: isSmallScreen ? '50px' : '150px',
+              marginLeft: isSmallScreen ? '90px' : '80px',
+              marginTop:isSmallScreen? '20px':'',            }}
+          />
+        );
       default:
         return null;
     }
   };
-
   const WeatherData = () => {
     if (error) {
       return <p className="error-message">{error}</p>;
@@ -83,9 +134,7 @@ const Home = () => {
             value={city}
             onChange={handleInputChange}
           />
-          <button className="button" type="submit">
-            Search
-          </button>
+
         </form>
       </div>
       {weatherData && (
