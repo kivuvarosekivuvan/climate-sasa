@@ -218,45 +218,6 @@
     }
   }
 
-  @media  (max-width: 280px) and (max-height:653px) {
-    .weather-info {
-      grid-template-rows: repeat     
-      (2,ifr,ifr) !important;
-      gap: 5px;
-   }
-    .input {
-      padding: 10px 15px;
-    }
-    .weather-item {
-      width: 40%;
-      margin-bottom: 10px;
-      height: 7vh;
-    }
-  
-    .cityname {
-      margin-left: 10px;
-      margin-top: 10px;
-      justify-content: center;
-    }
-  
-    .weather-label {
-      font-size: 10px;
-    }
-    
-    .weather-value {
-      font-size: 10px;
-    }
-    .weather-info-value{
-      font-size: 10px;
-    }
-    .weather-icon{
-      margin-left: -100px;
-    }
-
-
-  }
-
-
 @media  (max-width: 360px) and (max-height:740px) {
   .cityname {
     margin-left: 10px;
@@ -267,12 +228,16 @@
   }
   .input {
     padding: 10px 25px;
-    margin-left: 10px;
+    margin-left: 20px;
 
   } 
+  .weather-info{
+    margin-right: 40px;
+
+  }
   .weather-item{
     height: 8vh;
-    width: 13%;
+    width: 15%;
   }
   .weather-label {
     font-size: 6px;
@@ -331,3 +296,101 @@
 
 }
 
+@media  (max-width: 414px) and (max-height:736px) {
+  .input {
+    padding: 10px 50px;
+    margin-left: 20px;
+  } 
+  h1{
+    margin-left: 10px;
+  }
+  .cityname{
+    margin-left: 10px;
+  }
+  .weather-info{
+    width: 130%;
+  }
+  .weather-label {
+    font-size: 8px;
+  }
+  
+  .weather-value {
+    font-size: 8px;
+  }
+  
+}
+
+@media  (max-width: 280px) and (max-height:653px) {
+  .weather-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-left: 20px;
+ }
+  .input {
+    padding: 10px 10px;
+  }
+  .weather-item {
+    width: 25%;
+    margin-bottom: 10px;
+    height: 7vh;
+  }
+
+  .cityname {
+    margin-left: 10px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .weather-label {
+    font-size: 10px;
+  }
+  
+  .weather-value {
+    font-size: 10px;
+  }
+  .weather-info-value{
+    font-size: 10px;
+  }
+  .weather-icon{
+    margin-left: -0px;
+    margin-top: -30px;
+  }
+
+
+}
+
+@media  (max-width: 412px) and (max-height:915px) {
+  .cityname {
+    margin-left: -100px;
+    margin-top: -30px;
+  }
+  h1{
+    margin-left: -100px;
+  }
+  .input{
+    margin-left: -100px;
+    margin-top: -20px;
+  }
+  .weather-info{
+    display: flex;
+    margin-right: 40px;
+    flex-wrap: wrap;
+    margin-top: -20px;
+
+  }
+  .weather-item {
+    width: 18%;
+    margin-bottom: 10px;
+    height: 7vh;
+  }
+  .weather-value1{
+    font-size: 22px;
+
+
+  }
+  #city{
+    font-size: 16px;
+  }
+
+}

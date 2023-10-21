@@ -75,7 +75,9 @@
 
 @media  (max-width: 412px) and (max-height:915px) {
   .map-container {
-    margin-left: 80px;
+    margin-left: 25px;
+    height: 35vh;
+    margin-top: -20px;
   }
 
 }
@@ -100,11 +102,12 @@
 
   }
 }
-
-@media  (max-width: 393px) and (max-height:851px) {
+@media  (max-width: 414px) and (max-height:736px) {
   .map-container {
-    margin-left: 70px;
-    width: 65%;
-
+    width: 80%;
+    margin-left: 40px;
   }
+
 }
+
+
