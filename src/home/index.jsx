@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './style.css';
 import Map from '../atom/map';
-import { TiWeatherCloudy,TiWeatherSunny, TiWeatherShower, TiThermometer,TiWeatherSnow, TiArrowForwardOutline } from 'react-icons/ti';
+import { TiWeatherCloudy,TiWeatherSunny, TiWeatherShower, TiThermometer,TiWeatherSnow, TiArrowForwardOutline, TiChartLine   } from 'react-icons/ti';
 import useWeatherData from '../hooks/useGetWeather';
 
 const Home = () => {
@@ -94,10 +94,17 @@ const Home = () => {
               <p className="weather-label"><TiArrowForwardOutline />Wind Speed</p>
               <p className="weather-value">{weatherData.wind.speed} m/s</p>
             </div>
+            <div className="weather-item">
+              <p className="weather-label"><TiChartLine />Pressure</p>
+              <p className="weather-value">{weatherData.main.pressure} N/m²</p>
+            </div>
             <div className="weather-icon">
                 {getWeatherIcon(weatherData.weather[0].main)}
             </div>
+          
           </div>
+
+          
         </div>
       );
     }
@@ -106,7 +113,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className='body'>
       <h1>ClimateSasa</h1>
       <div className="form">
         <form onSubmit={handleSubmit} className="search">
@@ -120,15 +127,27 @@ const Home = () => {
 
         </form>
       </div>
+      <div>
+        <div className='map-weather-container'>
+
+<div className='map'>
       {weatherData && (
-  <Map
-    mapCenter={mapCenter}
-    temperature={(weatherData.main.temp - 273.15).toFixed(1)}
-    humidity={weatherData.main.humidity}
-  />
-)}      {WeatherData()}
+        <Map
+          mapCenter={mapCenter}
+          temperature={(weatherData.main.temp - 273.15).toFixed(1)}
+          humidity={weatherData.main.humidity}
+        />
+      )}</div>
+    
+      <div className="weather-container">{WeatherData()}</div>
+      </div>
+</div>
     </div>
   );
 };
 
+
 export default Home;
+
+
+

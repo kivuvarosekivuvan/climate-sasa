@@ -10,6 +10,7 @@ const useWeatherData = () => {
   const fetchWeatherData = async (cityName) => {
     try {
       const result = await getWeatherData(cityName);
+      console.log(result)
       setWeatherData(result);
       setError('');
 

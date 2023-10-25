@@ -1,14 +1,19 @@
-import './App.css';
-import Home from './home'
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Home/>
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SplashScreen from '../src/splash/index';
+import HomePage from '../src/home/index';
 
-      </header>
-    </div>
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<SplashScreen />} />
+        <Route path="/home" element={<HomePage />} />
+
+
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

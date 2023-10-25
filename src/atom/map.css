@@ -1,6 +1,6 @@
 .map-container {
-  width: 80%;
   height: 600px;
+  margin-top: 50px;
 }
 
 @media (max-width: 992px) {
@@ -11,10 +11,10 @@
 }
 
 @media (max-width: 768px) {
-  .map-container {
-    width: 60%;
-    height: 55vh;
-    margin-left: 70px;
+  .map-containers {
+    width: 40%;
+    height: 35vh;
+    margin-left: 100px;
   }
 }
 
@@ -29,7 +29,7 @@
 @media  (max-width: 540px) and (max-height:720px) {
   .map-container {
     width: 65%;
-    margin-left: 95px;
+    margin-left: 65px;
     height: 70vh;
   }
 }
@@ -38,8 +38,8 @@
 
 @media  (max-width: 1024px) and (max-height:600px) {
   .map-container {
-    width: 80%;
-    margin-top: -15px;
+    width: 40%;
+    margin-top: 15px;
 
   } 
 }
@@ -47,10 +47,10 @@
 
 @media  (max-width: 1280px) and (max-height:800px) {
   .map-container {
-    margin-left: 10px;
-    margin-top: -10px;
-    height: 30vh;
-    width: 70%;
+    margin-left: 40px;
+    margin-top: 60px;
+    height: 45vh;
+    width: 50%;
 
   } 
 }
@@ -75,7 +75,7 @@
 
 @media  (max-width: 412px) and (max-height:915px) {
   .map-container {
-    margin-left: 25px;
+    margin-left: 50px;
     height: 35vh;
     margin-top: -20px;
   }
@@ -83,7 +83,7 @@
 }
 @media  (max-width: 414px) and (max-height:896px) {
   .map-container {
-    margin-left: 100px;
+    margin-left: 50px;
     height: 35vh;
   }
 }
