@@ -1,5 +1,6 @@
 # ClimateSasa
 ClimateSasa is a simple weather application that allows users to search for weather information and provides a map with a tag on it. The location marker shows the temperature and humidity of that specific city.
+<img width="1564" alt="Screenshot 2024-08-02 at 20 08 43" src="https://github.com/user-attachments/assets/18ee52b2-363f-4f36-adbe-01307acad154">
 
 # Features
 ### Weather Search: 
